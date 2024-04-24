@@ -17,6 +17,10 @@ const IntroductionSection = () => {
         to equip myself with the skills necessary for creating scalable software
         applications
       </p>
+      <p>
+        I am also deeply interested in machine learning and artificial
+        intelligence.
+      </p>
     </>
   )
 }

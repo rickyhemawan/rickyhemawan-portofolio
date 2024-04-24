@@ -44,6 +44,7 @@ const ExperienceSection = () => {
         <h2>Risk Automation</h2>
         {/* mvs, tls */}
         <h2>Xendit Mobile</h2>
+        {/* bug fixing, internal documentation */}
         <h2>Fraud Operations Automation</h2>
         {/* mvs, blacklist */}
         <h2>Operations Automation</h2>
