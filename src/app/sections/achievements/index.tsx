@@ -65,6 +65,9 @@ const AchievementsSection = () => {
           it has proven to be instrumental throughout my career in software
           engineering.
         </p>
+        <h2>Final Project Source Code</h2>
+        <a href="#">Flutter App - Mobile</a>
+        <a href="#">Node.js App - Backend</a>
       </div>
     </>
   )
