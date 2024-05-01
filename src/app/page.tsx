@@ -16,13 +16,19 @@ export default function Home() {
         {/* card sandbox */}
         <div className="flex">
           <div className="flex-1">
-            <CardVertical />
+            <CardVertical>
+              <PlaceholderText />
+            </CardVertical>
           </div>
           <div className="flex-1">
-            <CardVertical />
+            <CardVertical>testing</CardVertical>
           </div>
           <div className="flex-1">
-            <CardVertical />
+            <CardVertical>
+              <MdxLayout>
+                <AchievementText />
+              </MdxLayout>
+            </CardVertical>
           </div>
         </div>
         {/* divider */}

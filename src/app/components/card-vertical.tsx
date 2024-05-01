@@ -6,14 +6,20 @@ const CardVertical: React.FC<{ children?: React.ReactNode }> = ({
       className="
         mx-2
         max-w-sm
-        overflow-hidden
-        rounded
-        bg-white
-        bg-opacity-15
+        border-spacing-1
+        p-4
         shadow-lg
       "
     >
-      {children}
+      <div
+        className="
+          to-slate
+          h-64
+          overflow-hidden 
+          "
+      >
+        {children}
+      </div>
     </div>
   )
 }
