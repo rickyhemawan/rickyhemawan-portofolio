@@ -1,4 +1,8 @@
-export default function MdxLayout({ children }: { children: React.ReactNode }) {
+export default function MdxLayout({
+  children,
+}: {
+  children?: React.ReactNode
+}) {
   // Create any shared layout or styles here
   return (
     <div
@@ -8,7 +12,7 @@ export default function MdxLayout({ children }: { children: React.ReactNode }) {
         max-w-none
         dark:prose-invert 
         prose-headings:mt-8 
-        prose-headings:font-semibold 
+        prose-headings:font-semibold
         prose-h1:text-center
         prose-h1:text-4xl
         prose-h2:mt-2
