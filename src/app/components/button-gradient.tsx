@@ -1,6 +1,8 @@
 import React from 'react'
 
-const ButtonGradient: React.FC = () => {
+const ButtonGradient: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
   return (
     <div className="relative inline-block">
       <div
@@ -18,7 +20,7 @@ const ButtonGradient: React.FC = () => {
         text-black
         shadow-lg"
       >
-        Button with Gradient Shadow
+        {children}
       </button>
     </div>
   )
