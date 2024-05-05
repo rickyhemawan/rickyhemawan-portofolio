@@ -12,7 +12,7 @@ const ButtonGradientBorder = ({
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="inline-block rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 p-0.5"
+      className="inline-block rounded-[9px] bg-gradient-to-r from-blue-500 to-purple-500 p-0.5"
     >
       <motion.button
         onClick={onClick}
