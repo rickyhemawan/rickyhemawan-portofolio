@@ -11,7 +11,7 @@ export interface Content {
 }
 
 // TODO: fix bug when "testing" content read more pressed, it will scroll down to next content
-const CardsContainer = ({ contents }: { contents: Content[] }) => {
+const CardsContainerV2 = ({ contents }: { contents: Content[] }) => {
   const [content, setContent] = useState<Content | null>(null)
 
   const onReadMore = (content: Content) => {
@@ -25,8 +25,24 @@ const CardsContainer = ({ contents }: { contents: Content[] }) => {
   return (
     <motion.div className="flex flex-wrap justify-center gap-2">
       <AnimatePresence>
-        {content === null ? (
-          contents.map(content => {
+        {content?.key && (
+          <motion.div
+            key={`selected-${content.key}`}
+            className="w-full"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: '100%', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, delay: 0.25, type: 'tween' }}
+            layout
+          >
+            <CardReadLess onButtonClick={onReadLess}>
+              {content?.content}
+            </CardReadLess>
+          </motion.div>
+        )}
+        {contents
+          .filter(e => e?.key !== content?.key)
+          .map(content => {
             return (
               <motion.div
                 key={content.key}
@@ -42,25 +58,10 @@ const CardsContainer = ({ contents }: { contents: Content[] }) => {
                 </CardReadMore>
               </motion.div>
             )
-          })
-        ) : (
-          <motion.div
-            key={`selected-${content.key}`}
-            className="w-full"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: '100%', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, delay: 0.25, type: 'tween' }}
-            layout
-          >
-            <CardReadLess onButtonClick={onReadLess}>
-              {content?.content}
-            </CardReadLess>
-          </motion.div>
-        )}
+          })}
       </AnimatePresence>
     </motion.div>
   )
 }
 
-export default CardsContainer
+export default CardsContainerV2

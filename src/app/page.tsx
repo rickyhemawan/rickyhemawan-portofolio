@@ -22,14 +22,7 @@ export default function Home() {
         <div className="h-48" />
         {/* card sandbox */}
         <SkillsetSection />
-        {/* divider */}
-        <div className="mt-80"></div>
-        {/* text sandbox */}
-        <div>
-          <MdxLayout>
-            <AchievementText />
-          </MdxLayout>
-        </div>
+        <div className="h-48" />
       </div>
     </main>
   )
