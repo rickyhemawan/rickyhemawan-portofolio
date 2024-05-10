@@ -23,10 +23,20 @@ const CardsContainerV4 = ({ contents }: { contents: Content[] }) => {
     setSelectedContents(contents)
   }
 
+  // sort selected contents to be on top
+  const sortContents = (contents: Content[]) => {
+    const selected = selectedContents.map(e => e.key)
+    return [...contents].sort((a, b) => {
+      if (selected.includes(a.key) && !selected.includes(b.key)) return -1
+      if (!selected.includes(a.key) && selected.includes(b.key)) return 1
+      return 0
+    })
+  }
+
   return (
     <motion.div className="flex flex-wrap justify-center gap-2">
       <AnimatePresence>
-        {contents.map(content => {
+        {sortContents(contents).map(content => {
           if (selectedContents.map(e => e.key).includes(content?.key))
             return (
               <motion.div
