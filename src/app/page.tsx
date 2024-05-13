@@ -7,22 +7,17 @@ import { ThemeSwitcher } from './components/theme-switcher'
 import ButtonGradientBorder from './components/button-gradient-border'
 import IntroductionSection from './sections/introduction'
 import SkillsetSection from './sections/skillset'
+import AchievementsSection from './sections/achievements'
 
 export default function Home() {
   return (
     <main>
       <AppNavbar />
       <ThemeSwitcher />
-      <ButtonGradientBorder>test</ButtonGradientBorder>
-      <div className="h-48" />
-      {/* <div className="mx-12 my-12"> */}
-
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <IntroductionSection />
-        <div className="h-48" />
         {/* card sandbox */}
-        <SkillsetSection />
-        <div className="h-48" />
+        <AchievementsSection className="py-24" />
       </div>
     </main>
   )

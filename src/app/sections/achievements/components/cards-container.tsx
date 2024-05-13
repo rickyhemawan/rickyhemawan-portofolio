@@ -5,9 +5,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import CardReadMore from './card-read-more'
 import CardReadLess from './card-read-less'
 import { Content } from '@/contents'
+import MdxLayout from '@/app/components/mdx-layout'
 
-// TODO: fix bug when "testing" content read more pressed, it will scroll down to next content
-const CardsContainerV4 = ({ contents }: { contents: Content[] }) => {
+const CardsContainer = ({ contents }: { contents: Content[] }) => {
   const [selectedContents, setSelectedContents] = useState<Content[]>([])
 
   const onReadMore = (content: Content) => {
@@ -44,7 +44,7 @@ const CardsContainerV4 = ({ contents }: { contents: Content[] }) => {
                 layout
               >
                 <CardReadLess onButtonClick={() => onReadLess(content)}>
-                  {content?.content}
+                  <MdxLayout>{content?.content}</MdxLayout>
                 </CardReadLess>
               </motion.div>
             )
@@ -59,7 +59,7 @@ const CardsContainerV4 = ({ contents }: { contents: Content[] }) => {
               className="w-[calc(66.666%_-_4px)] md:w-[calc(33.333%_-_4px)] lg:w-[calc(25%_-_4px)]"
             >
               <CardReadMore onButtonClick={() => onReadMore(content)}>
-                {content.content}
+                <MdxLayout>{content.content}</MdxLayout>
               </CardReadMore>
             </motion.div>
           )
@@ -69,4 +69,4 @@ const CardsContainerV4 = ({ contents }: { contents: Content[] }) => {
   )
 }
 
-export default CardsContainerV4
+export default CardsContainer

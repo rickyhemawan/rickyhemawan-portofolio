@@ -4,14 +4,17 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import CardReadMore from './card-read-more'
 import CardReadLess from './card-read-less'
-
-export interface Content {
-  key: string
-  content: React.ReactNode
-}
+import { Content } from '@/contents'
+import { cn } from '@/utils/cn'
 
 // TODO: fix bug when "testing" content read more pressed, it will scroll down to next content
-const CardsContainer = ({ contents }: { contents: Content[] }) => {
+const CardsContainer = ({
+  className,
+  contents,
+}: {
+  className?: string
+  contents: Content[]
+}) => {
   const [content, setContent] = useState<Content | null>(null)
 
   const onReadMore = (content: Content) => {
@@ -23,7 +26,9 @@ const CardsContainer = ({ contents }: { contents: Content[] }) => {
   }
 
   return (
-    <motion.div className="flex flex-wrap justify-center gap-2">
+    <motion.div
+      className={cn('flex flex-wrap justify-center gap-2', className)}
+    >
       <AnimatePresence>
         {content === null ? (
           contents.map(content => {

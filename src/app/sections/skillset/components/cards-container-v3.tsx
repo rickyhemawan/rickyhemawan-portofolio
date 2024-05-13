@@ -4,11 +4,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import CardReadMore from './card-read-more'
 import CardReadLess from './card-read-less'
-
-export interface Content {
-  key: string
-  content: React.ReactNode
-}
+import { Content } from '@/contents'
 
 // TODO: fix bug when "testing" content read more pressed, it will scroll down to next content
 const CardsContainerV3 = ({ contents }: { contents: Content[] }) => {
