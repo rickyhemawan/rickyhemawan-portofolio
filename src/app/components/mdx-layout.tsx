@@ -14,11 +14,11 @@ export default function MdxLayout({
         prose-headings:mt-8 
         prose-headings:font-semibold
         prose-h1:text-center
-        prose-h1:text-4xl
+        prose-h1:text-3xl
         prose-h2:mt-2
-        prose-h2:text-3xl
+        prose-h2:text-2xl
         prose-h3:mt-0
-        prose-h3:text-2xl
+        prose-h3:text-xl
       "
     >
       {children}

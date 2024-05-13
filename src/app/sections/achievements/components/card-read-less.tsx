@@ -18,7 +18,7 @@ const CardReadLess = ({
         <div className="my-2" />
         <div className="flex justify-end" w-full>
           <ButtonGradientBorder onClick={onButtonClick}>
-            Read Less
+            <div className="px-4 py-2">Read Less</div>
           </ButtonGradientBorder>
         </div>
       </div>
