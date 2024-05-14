@@ -1,7 +1,9 @@
 import { cn } from '@/utils/cn'
-import IntroductionText from '@/contents/introduction.mdx'
+import ShortIntroductionText from '@/contents/introductions/short.mdx'
+import ExtraIntroductionText from '@/contents/introductions/extra.mdx'
 import { BackgroundBeams } from './components/background-beams'
-import { Meteors } from './components/meteors'
+import ExpandableCard from './components/expandable-card'
+import MdxLayout from '@/app/components/mdx-layout'
 
 const IntroductionSection = ({ className }: { className?: string }) => {
   return (
@@ -16,13 +18,9 @@ const IntroductionSection = ({ className }: { className?: string }) => {
           </h2>
           <div className="my-12" />
           <div className="mx-1">
-            <div className=" relative w-full">
-              <div className="absolute inset-0 h-full w-full transform bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 blur-[12px]" />
-              <div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 p-4 shadow-xl">
-                <IntroductionText />
-                <Meteors number={5} />
-              </div>
-            </div>
+            <ExpandableCard expandedChildren={<ExtraIntroductionText />}>
+              <ShortIntroductionText />
+            </ExpandableCard>
           </div>
         </div>
         <div className="w-full md:w-[30%]"></div>

@@ -53,7 +53,7 @@ const CardsContainer = ({ contents }: { contents: Content[] }) => {
     >
       <div className="flex w-full flex-wrap justify-between">
         <h1 className="inline-block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-4xl text-transparent">
-          Achievements
+          Stories
         </h1>
         {selectedContents.length > 0 ? (
           <ButtonGradientBorder className="p-0" onClick={onCollapseAll}>
