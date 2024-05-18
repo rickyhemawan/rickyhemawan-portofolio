@@ -4,6 +4,7 @@ import ExtraIntroductionText from '@/contents/introductions/extra.mdx'
 import { BackgroundBeams } from './components/background-beams'
 import ExpandableCard from './components/expandable-card'
 import MdxLayout from '@/app/components/mdx-layout'
+import Anchors from './components/anchors'
 
 const IntroductionSection = ({ className }: { className?: string }) => {
   return (
@@ -13,9 +14,13 @@ const IntroductionSection = ({ className }: { className?: string }) => {
           <h1 className="bg-gradient-to-r from-cyan-400 via-green-400 to-indigo-400 bg-clip-text text-5xl font-bold text-transparent">
             Ricky Hemawan
           </h1>
-          <h2 className="bg-gradient-to-r from-cyan-400 via-green-400 to-indigo-400 bg-clip-text text-4xl text-transparent">
-            Software Engineer
-          </h2>
+          <div className="my-0.5" />
+          <div className="flex flex-row flex-wrap gap-4">
+            <h2 className="bg-gradient-to-r from-cyan-400 via-green-400 to-indigo-400 bg-clip-text text-4xl text-transparent">
+              Software Engineer
+            </h2>
+            <Anchors />
+          </div>
           <div className="my-12" />
           <div className="mx-1">
             <ExpandableCard expandedChildren={<ExtraIntroductionText />}>
