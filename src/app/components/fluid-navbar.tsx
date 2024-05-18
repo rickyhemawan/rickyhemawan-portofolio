@@ -24,7 +24,7 @@ const FluidNavbar = () => {
                       <motion.div
                         key="nav-selected"
                         layoutId="nav-selected"
-                        className="text-md absolute inset-0 z-10 m-1.5 rounded-full bg-orange-600 px-3 py-2 font-bold text-transparent md:px-6 md:py-4 md:text-xl"
+                        className="text-md absolute inset-0 z-10 m-1.5 rounded-full bg-gradient-to-r from-orange-500 to-yellow-400 px-3 py-2 font-bold text-transparent md:px-6 md:py-4 md:text-xl"
                         animate={{
                           scaleX: [1, 1.2, 1],
                           scaleY: [1, 0.8, 1],
@@ -37,12 +37,15 @@ const FluidNavbar = () => {
                       >
                         {nav}
                       </motion.div>
-                      <div
+                      <motion.div
                         key="nav-selected-2"
-                        className="text-md absolute inset-0 z-20 px-3 py-2 font-bold text-white md:px-6 md:py-4 md:text-xl"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-md absolute inset-0 z-20 px-3 py-2 font-bold text-black md:px-6 md:py-4 md:text-xl"
                       >
                         {nav}
-                      </div>
+                      </motion.div>
                     </>
                   )}
                   <motion.button
