@@ -29,7 +29,7 @@ const IntroductionSection = ({ className }: { className?: string }) => {
         </div>
         <div className="w-full md:w-[30%]"></div>
       </div>
-      <BackgroundBeams />
+      {/* <BackgroundBeams /> */}
     </div>
   )
 }

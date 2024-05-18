@@ -1,0 +1,39 @@
+- abcd : main
+
+- fork abcd -> rickyhemawan
+- rickyhemawan/main -> git checkout -b feat/123
+
+commit 1
+commit 2
+commit 3
+
+sync abcd/main <- rickyhemawan/main
+git rebase origin rickyhemawan/main
+
+new PR, abcd/main <- rickyhemawan/feat/123
+
+merge and squash -> commit 1-3
+
+x.x.x.x.x.y.y.y.y.y.-
+  -.-.-.-.x.-.......y
+
+x.x.x.x.x.x.x.
+  x.       \x.
+
+git stash
+git rebase origin/rickyhemawan/main
+git push --force
+git stash apply
+git add commit push
+pr abcd/main <- rickyhemawan/feat/123
+git add commit push
+[BRO] eh tau2nya master ada commit baru, trus conflict
+rickyhemawan/main: sync
+feat/123: git fetch from rickyhemawan/main
+git rebase origin/rickyhemawan/main
+-- resolve conflict di vscode
+git add commit
+git push --force
+conflict resolved
+jika conflict lagi balik ke [BRO]
+git squash & merge [commit message bakal pake title pr github]
