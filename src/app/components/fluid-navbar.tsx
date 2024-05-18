@@ -1,12 +1,19 @@
 'use client'
+import { cn } from '@/utils/cn'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-const navigation: string[] = ['Skillset', 'Stories', 'Career'] as const
+const navigation: string[] = ['Skillset', 'Stories', 'Journey'] as const
 
-const FluidNavbar = () => {
+const FluidNavbar = ({
+  className,
+  onNavbarValueChanged,
+}: {
+  className?: string
+  onNavbarValueChanged?: (value: string) => void
+}) => {
   const [selected, setSelected] = useState(navigation[1])
   return (
-    <div className="flex w-full items-center justify-center">
+    <div className={cn('flex w-full items-center justify-center', className)}>
       <div className="inline-flex rounded-full bg-gradient-to-br from-red-700 via-orange-600 to-yellow-500 p-[3px]">
         <div className=" inline-flex w-auto flex-wrap rounded-full bg-black">
           {navigation.map(nav => {
@@ -85,7 +92,13 @@ const FluidNavbar = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5, type: 'spring' }}
-                  onClick={() => setSelected(nav)}
+                  onClick={() => {
+                    setSelected(nav)
+                    // wait for the animation to finish
+                    setTimeout(() => {
+                      onNavbarValueChanged?.(nav)
+                    }, 500)
+                  }}
                   layout
                 >
                   {nav}

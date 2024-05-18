@@ -49,7 +49,7 @@ const CardsContainer = ({ contents }: { contents: Content[] }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 0.5, type: 'spring' }}
     >
       <div className="flex w-full flex-wrap justify-between">
         <h1 className="inline-block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-4xl text-transparent">

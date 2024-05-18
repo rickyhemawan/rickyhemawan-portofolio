@@ -23,6 +23,10 @@ const contents: Content[] = [
 const SkillsetSection = ({ className }: { className?: string }) => {
   return (
     <div className={cn('', className)}>
+      <h1 className="inline-block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-4xl text-transparent">
+        Skills (Maintenance)
+      </h1>
+      <div className="my-6" />
       <CardsContainerV4 contents={contents} />
     </div>
   )

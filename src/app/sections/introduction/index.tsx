@@ -3,7 +3,6 @@ import ShortIntroductionText from '@/contents/introductions/short.mdx'
 import ExtraIntroductionText from '@/contents/introductions/extra.mdx'
 import { BackgroundBeams } from './components/background-beams'
 import ExpandableCard from './components/expandable-card'
-import MdxLayout from '@/app/components/mdx-layout'
 import Anchors from './components/anchors'
 
 const IntroductionSection = ({ className }: { className?: string }) => {
