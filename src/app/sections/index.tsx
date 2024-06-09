@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import FluidNavbar from '../components/fluid-navbar'
 import AchievementsSection from './achievements'
 import SkillsetSection from './skillset'
@@ -9,9 +10,9 @@ const Sections = () => {
   const [selected, setSelected] = useState<string | null>(null)
   return (
     <>
-      <div className="sticky top-4 z-50">
+      <motion.div className="sticky top-4 z-50" layout>
         <FluidNavbar onNavbarValueChanged={value => setSelected(value)} />
-      </div>
+      </motion.div>
       <div className="pt-4" />
       {(selected === null || selected === 'Stories') && (
         <AchievementsSection className="pt-4" />

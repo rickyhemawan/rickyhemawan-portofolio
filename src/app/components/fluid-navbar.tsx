@@ -47,7 +47,6 @@ const FluidNavbar = ({
                         duration: 0.5,
                         times: [0, 0.75, 1],
                       }}
-                      layout
                     >
                       {nav}
                     </motion.div>
@@ -99,7 +98,6 @@ const FluidNavbar = ({
                       onNavbarValueChanged?.(nav)
                     }, 500)
                   }}
-                  layout
                 >
                   {nav}
                 </motion.button>
