@@ -57,10 +57,10 @@ const Timeline = ({
         sm:after:ml-[6.5rem]
       `}
     >
-      <time className="left-0 mb-3 inline-flex h-6 w-20 translate-y-0.5 items-center justify-center rounded-full bg-emerald-100 text-xs font-semibold uppercase text-emerald-600 sm:absolute sm:mb-0">
+      <time className="left-0 mb-3 inline-flex h-6 w-20 translate-y-0.5 items-center justify-center rounded-full bg-emerald-100 text-xs font-semibold uppercase text-emerald-700 sm:absolute sm:mb-0">
         {date}
       </time>
-      <div className="text-xl font-bold text-emerald-100">{children}</div>
+      <div className="text-2xl font-bold text-emerald-100">{children}</div>
     </div>
   )
 }
@@ -155,38 +155,82 @@ const Mark = ({
 
 const VerticalTimeline = () => {
   return (
-    <div className="-my-6">
+    <div className="mx-auto max-w-2xl">
       <Section>
-        <Timeline date="2023-2024">
-          Bluelake Indonesia・Mobile Developer
+        <Timeline date="Aug, 2018">
+          Bluelake Indonesia・Intern Mobile Developer
         </Timeline>
       </Section>
       <Section>
-        <Timeline date="2023-2024">Freelance・Software Engineer</Timeline>
-      </Section>
-      <Section>
-        <Timeline date="2023-2024">
-          Xendit・Junior Software Engineer・Operations Automation
-        </Timeline>
+        <Timeline date="Jun, 2019">Freelance・Software Engineer</Timeline>
         <div className="my-4 text-justify">
-          As a Junior Software Engineer, able to work on diverse tech stacks and
-          multiple teams in order to automate internal processes Able to learn
-          tech stacks and agile methodologies quickly to deliver value to the
-          company
+          Able to over-deliver product faster than the timeline given by
+          customer
+        </div>
+        <div className="my-8" />
+        <div>
+          <MarkTitle>
+            <h3 className="text-md rounded-sm bg-purple-300 px-3 py-1 font-bold text-purple-700">
+              Notable Deliverables
+            </h3>
+          </MarkTitle>
+          <Mark>
+            Spearheaded UI upgrades across multiple websites to ensure alignment
+            with contemporary UX design principles.
+          </Mark>
+          <Mark>
+            Engineered comprehensive internal administrative systems, spanning
+            from front-end to back-end, tailored specifically for a local silver
+            shop.
+          </Mark>
+          <Mark>
+            Developed a range of highly functional mobile applications for
+            various local businesses, predominantly serving internal operational
+            needs.
+          </Mark>
         </div>
       </Section>
       <Section>
-        <Timeline date="2023-2024">
-          Xendit・Junior Software Engineer・Fraud Operations Automation
+        <Timeline date="Jun, 2021">
+          Xendit・Junior Software Engineer・Operations Automation
         </Timeline>
+        <div className="my-4 text-justify">
+          As a Junior Software Engineer, I am able to work on diverse tech
+          stacks and multiple teams in order to automate internal processes,
+          able to learn tech stacks and agile methodologies quickly to deliver
+          value to the company
+        </div>
       </Section>
       <Section>
-        <Timeline date="2023-2024">
+        <Timeline date="Dec, 2021">
+          Xendit・Junior Software Engineer・Fraud Operations Automation
+        </Timeline>
+        <div className="my-4 text-justify">
+          As a Junior Software Engineer that has 6 months of experience in
+          Xendit, I am able to deliver work given on time and give value to the
+          company
+        </div>
+        <div className="my-8" />
+        <div>
+          <MarkTitle>
+            <h3 className="text-md rounded-sm bg-purple-300 px-3 py-1 font-bold text-purple-700">
+              Notable Deliverables
+            </h3>
+          </MarkTitle>
+          <Mark>
+            Collaborated with the fraud team to create a fraud detection system
+            that can detect potential fraudsters based on parameters determined
+            by product team.
+          </Mark>
+        </div>
+      </Section>
+      <Section>
+        <Timeline date="Jun, 2022">
           Xendit・Software Engineer・Fraud Operations Automation
         </Timeline>
         <div className="my-4 text-justify">
-          As a Software Engineer, Able to work on diverse tech stacks, diverse
-          code bases (from other core teams), to research, implement and
+          As a Software Engineer, I am able to work on diverse tech stacks,
+          diverse code bases (from other core teams), to research, implement and
           maintain fraud detection systems.
         </div>
         <div className="my-4 text-justify">
@@ -201,16 +245,51 @@ const VerticalTimeline = () => {
           what we have, what we can do, and what we can not do without breaking
           existing system. (Avoiding long-term blockers)
         </div>
+        <div className="my-8" />
+        <div>
+          <MarkTitle>
+            <h3 className="text-md rounded-sm bg-purple-300 px-3 py-1 font-bold text-purple-700">
+              Notable Deliverables
+            </h3>
+          </MarkTitle>
+          <Mark>
+            Collaborate and implemented blacklist and whitelist features to the
+            fraud detection system to improve the accuracy of the fraud
+            detection system.
+          </Mark>
+          <Mark>
+            Collaborate on design, collaborate on proposal, and implemented the
+            first Kafka publisher for node.js services on Xendit. Why this is
+            important?
+            <ol className="m-4">
+              <li className="my-4 list-disc">
+                This is important because it was a new tech stack that can be
+                used by other teams to implement Kafka on their services.
+                (Introduced boilerplate code, with guidance of senior engineers)
+              </li>
+              <li className="my-4 list-disc">
+                Worked intensively with the infrastructure team to implement
+                Kafka on node.js based service (previously only on Go Services
+                and Notebooks).
+              </li>
+              <li className="my-4 list-disc">
+                Many developers at Xendit who are interested in publishing Kafka
+                have sought my guidance, as I was the pioneer in node.js
+                implementation within Xendit.
+              </li>
+            </ol>
+          </Mark>
+        </div>
       </Section>
       <Section>
-        <Timeline date="2023-2024">Xendit・Software Engineer・Mobile</Timeline>
+        <Timeline date="Dec, 2022">Xendit・Software Engineer・Mobile</Timeline>
         <div className="my-4 text-justify">
           As an experienced mobile developer specializing in the Flutter
           framework, I am capable of delivering significant enhancements to
           improve the existing mobile application for Xendit. Implement almost
           pixel perfect UI changes as provided by UX designer and management.
         </div>
-        <div className="my-16" />
+        <div className="my-8" />
         <div>
           <MarkTitle>
             <h3 className="text-md rounded-sm bg-purple-300 px-3 py-1 font-bold text-purple-700">
@@ -233,7 +312,7 @@ const VerticalTimeline = () => {
         </div>
       </Section>
       <Section>
-        <Timeline date="2023-2024">
+        <Timeline date="Apr, 2023">
           Xendit・Software Engineer・Risk Automation
         </Timeline>
         <div className="my-4 text-justify">
@@ -251,7 +330,7 @@ const VerticalTimeline = () => {
           starting from the requirement analysis phase through extensive
           research and development.
         </div>
-        <div className="my-16" />
+        <div className="my-8" />
         <div>
           <MarkTitle>
             <h3 className="text-md rounded-sm bg-purple-300 px-3 py-1 font-bold text-purple-700">
@@ -282,7 +361,7 @@ const VerticalTimeline = () => {
         </div>
       </Section>
       <Section>
-        <Timeline date="2023-2024">
+        <Timeline date="Sep, 2023">
           Xendit・Software Engineer・Chargeback Automation
         </Timeline>
         <div className="my-4 text-justify">
@@ -296,7 +375,7 @@ const VerticalTimeline = () => {
           the service without any issue. While also improving the documentation
           for it for any onboarder in the future.
         </div>
-        <div className="my-16" />
+        <div className="my-8" />
         <div>
           <MarkTitle>
             <h3 className="text-md rounded-sm bg-purple-300 px-3 py-1 font-bold text-purple-700">
