@@ -1,3 +1,6 @@
+import Chip from '@/app/components/chip'
+import { useState } from 'react'
+
 const Section = ({ children }: { children?: React.ReactNode }) => {
   return <div className="group relative py-6 pl-8 sm:pl-32">{children}</div>
 }
@@ -153,6 +156,36 @@ const Mark = ({
   )
 }
 
+const ChipContainer = ({ children }: { children?: React.ReactNode }) => {
+  const MAX_CHIP = 4
+  const [isShowAll, setShowAll] = useState(false)
+  const isChildrenArray = Array.isArray(children)
+
+  if (!isChildrenArray || children.length <= MAX_CHIP) {
+    return <div className="inline-block">{children}</div>
+  }
+
+  return isShowAll ? (
+    <div className="inline-block">
+      {children}
+      <Chip className="bg-gradient-to-tr from-orange-500 to-yellow-300 text-black">
+        <button onClick={() => setShowAll(false)}>
+          -{children.length - MAX_CHIP}
+        </button>
+      </Chip>
+    </div>
+  ) : (
+    <div className="inline-block">
+      {children.slice(0, MAX_CHIP)}
+      <Chip className="bg-gradient-to-tr from-orange-500 to-yellow-400 text-black">
+        <button onClick={() => setShowAll(true)}>
+          +{children.length - MAX_CHIP}
+        </button>
+      </Chip>
+    </div>
+  )
+}
+
 const VerticalTimeline = () => {
   return (
     <div className="mx-auto max-w-2xl">
@@ -160,9 +193,50 @@ const VerticalTimeline = () => {
         <Timeline date="Aug, 2018">
           Bluelake Indonesia・Intern Mobile Developer
         </Timeline>
+        <div className="my-2" />
+        <ChipContainer>
+          <Chip className="bg-blue-200 text-blue-700">Flutter</Chip>
+          <Chip className="bg-yellow-200 text-yellow-700">GCP</Chip>
+          <Chip className="bg-orange-200 text-orange-700">Firebase</Chip>
+          <Chip className="bg-green-200 text-green-700">MongoDB</Chip>
+        </ChipContainer>
+        <div className="my-4 text-justify">
+          Able to learn new framework (Flutter), deliver values to the company
+          as an Intern
+        </div>
+        <div className="my-8" />
+        <div>
+          <MarkTitle>
+            <h3 className="text-md rounded-sm bg-purple-300 px-3 py-1 font-bold text-purple-700">
+              Notable Deliverables
+            </h3>
+          </MarkTitle>
+          <Mark>
+            Learn, develop and publish changes for existing mobile app by
+            utilizing firebase, and google cloud computing.
+          </Mark>
+          <Mark>
+            Learn, develop and publish existing node.js code utilizing google
+            cloud functions.
+          </Mark>
+          <Mark>
+            Able to implement native specific codebase such as payment gateway
+            and google map api, for both iOS and Android by using flutter app.
+          </Mark>
+        </div>
       </Section>
       <Section>
         <Timeline date="Jun, 2019">Freelance・Software Engineer</Timeline>
+        <div className="my-2" />
+        <ChipContainer>
+          <Chip className="bg-blue-200 text-blue-700">Flutter</Chip>
+          <Chip className="bg-blue-200 text-blue-700">React.js</Chip>
+          <Chip className="bg-yellow-200 text-yellow-700">Express.js</Chip>
+          <Chip className="bg-yellow-200 text-yellow-700">GCP</Chip>
+          <Chip className="bg-orange-200 text-orange-700">Firebase</Chip>
+          <Chip className="bg-blue-200 text-blue-700">PostgreSQL</Chip>
+          <Chip className="bg-green-200 text-green-700">MongoDB</Chip>
+        </ChipContainer>
         <div className="my-4 text-justify">
           Able to over-deliver product faster than the timeline given by
           customer
@@ -199,6 +273,25 @@ const VerticalTimeline = () => {
           stacks and multiple teams in order to automate internal processes,
           able to learn tech stacks and agile methodologies quickly to deliver
           value to the company
+        </div>
+        <div className="my-8" />
+        <div>
+          <MarkTitle>
+            <h3 className="text-md rounded-sm bg-purple-300 px-3 py-1 font-bold text-purple-700">
+              Notable Deliverables
+            </h3>
+          </MarkTitle>
+          <Mark>
+            Collaboratively developed and integrated the a payment channel
+            feature into the front end of the internal admin dashboard,
+            complementing my colleagues backend implementation.
+          </Mark>
+          <Mark>
+            Collaborated on the creation of a chatbot automation system using
+            popular communication and support platforms, enabling seamless
+            integration with the company existing automation systems and
+            allowing only trusted business partners to use it.
+          </Mark>
         </div>
       </Section>
       <Section>
