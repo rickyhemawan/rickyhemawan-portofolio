@@ -8,7 +8,7 @@ const Section = ({ children }: { children?: React.ReactNode }) => {
 }
 
 const SubContent = ({ children }: { children?: React.ReactNode }) => {
-  return <div className="my-45 text-justify">{children}</div>
+  return <div className="my-4 text-justify">{children}</div>
 }
 
 const NotableDeliverables = () => {
