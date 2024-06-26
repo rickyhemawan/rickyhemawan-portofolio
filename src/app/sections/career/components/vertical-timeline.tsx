@@ -34,6 +34,7 @@ const VerticalTimeline = () => {
           <Chip className="bg-yellow-200 text-yellow-700">GCP</Chip>
           <Chip className="bg-orange-200 text-orange-700">Firebase</Chip>
           <Chip className="bg-green-200 text-green-700">MongoDB</Chip>
+          <Chip className="bg-green-200 text-green-700">Java Android</Chip>
         </ChipContainer>
         <SubContent>
           Able to learn new framework (Flutter), deliver values to the company
@@ -71,23 +72,20 @@ const VerticalTimeline = () => {
           customer
         </SubContent>
         <div className="my-8" />
-        <div>
-          <NotableDeliverables />
-          <Marker>
-            Spearheaded UI upgrades across multiple websites to ensure alignment
-            with contemporary UX design principles.
-          </Marker>
-          <Marker>
-            Engineered comprehensive internal administrative systems, spanning
-            from front-end to back-end, tailored specifically for a local silver
-            shop.
-          </Marker>
-          <Marker>
-            Developed a range of highly functional mobile applications for
-            various local businesses, predominantly serving internal operational
-            needs.
-          </Marker>
-        </div>
+        <NotableDeliverables />
+        <Marker>
+          Spearheaded UI upgrades across multiple websites to ensure alignment
+          with contemporary UX design principles.
+        </Marker>
+        <Marker>
+          Engineered comprehensive internal administrative systems, spanning
+          from front-end to back-end, tailored specifically for a local silver
+          shop.
+        </Marker>
+        <Marker>
+          Developed a range of highly functional mobile applications for various
+          local businesses, predominantly serving internal operational needs.
+        </Marker>
       </Section>
       <Section>
         <Timeline date="Jun, 2021">
@@ -100,20 +98,18 @@ const VerticalTimeline = () => {
           value to the company
         </SubContent>
         <div className="my-8" />
-        <div>
-          <NotableDeliverables />
-          <Marker>
-            Collaboratively developed and integrated the a payment channel
-            feature into the front end of the internal admin dashboard,
-            complementing my colleagues backend implementation.
-          </Marker>
-          <Marker>
-            Collaborated on the creation of a chatbot automation system using
-            popular communication and support platforms, enabling seamless
-            integration with the company existing automation systems and
-            allowing only trusted business partners to use it.
-          </Marker>
-        </div>
+        <NotableDeliverables />
+        <Marker>
+          Collaboratively developed and integrated the a payment channel feature
+          into the front end of the internal admin dashboard, complementing my
+          colleagues backend implementation.
+        </Marker>
+        <Marker>
+          Collaborated on the creation of a chatbot automation system using
+          popular communication and support platforms, enabling seamless
+          integration with the company existing automation systems and allowing
+          only trusted business partners to use it.
+        </Marker>
       </Section>
       <Section>
         <Timeline date="Dec, 2021">
@@ -125,14 +121,12 @@ const VerticalTimeline = () => {
           company
         </SubContent>
         <div className="my-8" />
-        <div>
-          <NotableDeliverables />
-          <Marker>
-            Collaborated with the fraud team to create a fraud detection system
-            that can detect potential fraudsters based on parameters determined
-            by product team.
-          </Marker>
-        </div>
+        <NotableDeliverables />
+        <Marker>
+          Collaborated with the fraud team to create a fraud detection system
+          that can detect potential fraudsters based on parameters determined by
+          product team.
+        </Marker>
       </Section>
       <Section>
         <Timeline date="Jun, 2022">
@@ -262,11 +256,11 @@ const VerticalTimeline = () => {
           front-end and data analysis to become sole maintainer of chargeback
           automation related services.
         </SubContent>
-        <div className="text-justify">
+        <SubContent>
           Able to receive handover from previous maintainer and able to maintain
           the service without any issue. While also improving the documentation
           for it for any onboarder in the future.
-        </div>
+        </SubContent>
         <div className="my-8" />
         <NotableDeliverables />
         <Marker>
@@ -303,7 +297,7 @@ const VerticalTimeline = () => {
         <Timeline date="Dec, 2023">
           Xendit・Senior Software Engineer?・Glimpse of Hope
         </Timeline>
-        <div className="text-justify">
+        <SubContent>
           My consistent ability to conduct research, foster cross-team
           collaboration, deliver satisfactory Xendit-wide presentations, mentor
           junior developers, collaborate effectively with architects, and
@@ -311,15 +305,15 @@ const VerticalTimeline = () => {
           to the role of Senior Software Engineer. This decision has been fully
           endorsed by upper management in anticipation of the next performance
           review cycle
-        </div>
+        </SubContent>
       </Section>
       <Section>
         <Timeline last date="Feb, 2024">
           Thank you Xendit!・Promoted to Customer
         </Timeline>
-        <div>
+        <SubContent>
           Mass Layoff occured, and I was one of the many that got laid off.
-        </div>
+        </SubContent>
       </Section>
     </div>
   )
